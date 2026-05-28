@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 const Chatbot = () => {
   const chatRef = useRef(null);
   const [messages, setMessages] = useState([
-    { role: "bot", text: "👋 Hi! I'm Wezan chatbot, your virtual assistant 🤖." },
+    { role: "bot", text: "👋 Hi! I'm XYZ chatbot, your virtual assistant 🤖." },
     { role: "user", text: "Hello, I need some help." },
     { role: "bot", text: "Sure! What can I assist you with today? 💡" },
     { role: "user", text: "Tell me about your services." },
@@ -26,7 +26,7 @@ const Chatbot = () => {
 
     const opt = {
       margin: 0.5,
-      filename: "wezanchat_conversation.pdf",
+      filename: "xyzchat_conversation.pdf",
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: { scale: 2 },
       jsPDF: { unit: "in", format: "letter", orientation: "portrait" },

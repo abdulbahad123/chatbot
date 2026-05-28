@@ -16,6 +16,7 @@ import Spinner from './animation/Spinner';
 // Set fonts for pdfMake
 pdfMake.vfs = pdfFonts?.default?.pdfMake?.vfs;
 
+const EMAIL_SERVER_URL = import.meta.env.DEV ? "http://localhost:5000" : "https://chatbot-84am.onrender.com";
 
 const Reactchatbot = () => {
      
@@ -201,7 +202,7 @@ function getBotReply(userInput) {
         formData.append("file", blob, "chat-history.pdf");
     
         try {
-          const response = await fetch("https://chatbot-84am.onrender.com/send-email", {
+          const response = await fetch(`${EMAIL_SERVER_URL}/send-email`, {
             method: "POST",
             body: formData,
           });
@@ -287,9 +288,9 @@ function getBotReply(userInput) {
                        <div className="message bot-message mb-[1rem]">
                 <TbMessageChatbotFilled className='text-[1.5rem]'/>
                  <div className="message-text">
-                  <h2>👋Hi! I'm Wezan chatbot,how may I assist you? </h2>
-                  <button className='servicebtn !border-blue-600 hover:!border-black' onClick={()=>Diplayinformation('job descriptions')}> Job descriptions</button><br/>   
-                  <button className='servicebtn !border-blue-600 hover:!border-black' onClick={()=>Diplayinformation('Project Enquiries')}>Project enquiries</button> 
+                  <h2>👋Hi! I'm XYZ chatbot, how may I assist you? </h2>
+                  <button className='servicebtn' onClick={()=>Diplayinformation('job descriptions')}> Job descriptions</button><br/>   
+                  <button className='servicebtn' onClick={()=>Diplayinformation('Project Enquiries')}>Project enquiries</button> 
                  </div>
 
                 </div>

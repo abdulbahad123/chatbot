@@ -78,14 +78,14 @@ app.get("/api/jobseeker",async (req,res)=>{
 
 // SERVER STARTING 
 
+app.listen(PORT2,()=>{
+  console.log(`✅ Database API server running on http://localhost:${PORT2}`);
+})
+
 mongodb().then(()=>{
       console.log("database connected");
-      
-    app.listen(PORT2,()=>{
-      console.log(`✅ Email server running on http://localhost:${PORT2}`);
-        
-    })}
-)
-
-.catch(er=>console.log("database not connect")
-)
+})
+.catch(er=>{
+  console.log("database not connect");
+  console.error("Connection error details:", er);
+})

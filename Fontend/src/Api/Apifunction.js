@@ -1,3 +1,5 @@
+const API_BASE_URL = import.meta.env.DEV ? "http://localhost:3000" : "https://chatbot-9xlk.onrender.com";
+
 export const projectapi= async (formData)=>{
   
     console.log("api function ", formData);
@@ -5,7 +7,7 @@ export const projectapi= async (formData)=>{
 
 
     try{
-    const response= await fetch("https://chatbot-9xlk.onrender.com/api/project", {
+    const response= await fetch(`${API_BASE_URL}/api/project`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -33,7 +35,7 @@ export const jobapi= async (formData)=>{
 
 
   try{
-  const response= await fetch("https://chatbot-9xlk.onrender.com/api/job", {
+  const response= await fetch(`${API_BASE_URL}/api/job`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

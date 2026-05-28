@@ -1,6 +1,6 @@
 export const wezanBotinfo = {
-    botName: "WezanBot",
-    companyName: "Wezan Technologies",
+    botName: "XYZ Bot",
+    companyName: "XYZ Company",
     flows: [
 
     
@@ -12,7 +12,7 @@ export const wezanBotinfo = {
           role: "bot",
           intent: "Thanks, thank you ,thank",
           replies: [
-            "👋 Thank you for chatting with Wezan. Have a great day!",
+            "👋 Thank you for chatting with XYZ Company. Have a great day!",
             
           ]
         },
