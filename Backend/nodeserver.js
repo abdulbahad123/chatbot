@@ -9,6 +9,9 @@ const Jobseeker=require("./model/jobseeker")
 
 const PORT2 = process.env.PORT || 3000;
 
+app.get('/', (req, res) => {
+  res.send("✅ Database API server is running successfully!");
+});
 
 // Sample POST Route to Save Client
 app.post('/api/project', async (req, res) => {
