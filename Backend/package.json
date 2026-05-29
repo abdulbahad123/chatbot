@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node emailsend.js"
+    "start": "node nodeserver.js",
+    "start:api": "node nodeserver.js",
+    "start:email": "node emailsend.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
